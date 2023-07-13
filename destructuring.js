@@ -5,8 +5,56 @@
 
 // Destructuring arrays
 
+/* let ages = [30, 26, 27];
+let john = ages[0];
+let mary = ages[1];
+let joe = ages[2];
+console.log(john, mary, joe); */
+let [john, mary, joe] = ages;
+console.log(john, mary, joe);
+
 // Destructuring objects
+let jobb = {
+    mike: "designer",
+    jill: "developer",
+    alicia: "accountant"
+};
+let { mike, jill, alicia } = jobs;
+console.log(mike, jill, alicia);
+
 
 // Destructuring subsets
+let language = ["english", "french", "spanish", "german", "japanese"];
+let [johnNative, johnSecondary] = languages;
+console.log(johnNative, johnSecondary);
+
+let [, , maryNative, marySecondary] = languages;
+console.log(maryNative, marySecondary);
+
+let languages2 = {
+    firstLanguage: "english",
+    secondLanguage: "french",
+    thirdLanguage: "german",
+    fourthLanguage: "Japanese"
+};
+let { firstLanguage, thirdLanguage } = languages2;
+console.log(firstLanguage, thirdLanguage);
+
 
 // Using rest parameter syntax
+let fruit = ["apple", "orange", "banana", "peach", "cherry"];
+let [favorite, secondFavorite, ...others] = fruits;
+console.log(favorite);
+console.log(secondFavorite);
+console.log(others);
+
+let favoriteFoods = {
+    brain: "pizza",
+    anna: "pasta",
+    sarah: "vegetarian",
+    andrea: "steak"
+};
+let {brian, anna, ...rest} = favoriteFoods;
+console.log(brian);
+console.log(anna);
+console.log(rest);
